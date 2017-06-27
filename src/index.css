@@ -9,14 +9,11 @@ body {
   bottom: 20px;
   right: 0;
   z-index: 996;
-  background: rgba(0,0,0,.5);
-  border-radius: 0;
-  padding: 9px;
   cursor: pointer;
 }
 
 .scrollTop i {
-  font-size: 36pt;
+  font-size: 20pt;
   color: white;
 }
 
@@ -24,4 +21,42 @@ body {
 .side-nav {
   min-height: 1000px;
   z-index: 1002;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.appRoot2 {
+  min-width:700px;
+}
+
+.pushDown {
+  margin-top:2em;
+}
+
+.pushDownLarge {
+  margin-top:3em;
+}
+
+.loader {
+  position:absolute !important;
+  top:40%;
+  left:50%;
+  width:100px;
+  margin-left:0;
+}
+
+.max-width {
+  max-width:1200px;
+  margin:auto;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin{
+  margin:0 !important;
 }

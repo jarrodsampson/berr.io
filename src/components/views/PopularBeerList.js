@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import OwlCarousel from 'react-owl-carousel';
+
 // Using "Stateless Functional Components"
 export default function(props) {
     return (
-        <div className="row itemHolder">
+        <OwlCarousel slideSpeed={300} items={6} itemsTablet={[1200,4]} itemsMobile={[700,2]} stopOnHover={true} lazyLoad={true} autoPlay={true} singleItem={false}>
             {props.beers.map((beer, i) => {
                 return (
-                    <div key={beer.id} className="col s12 m6 l4">
+                    <div key={beer.id} className="item">
                         <div className="beerBox">
                             <div className="card hoverable">
                                 <NavLink to={'/beer/' + beer.id}>
@@ -30,6 +32,6 @@ export default function(props) {
 
             })}
 
-        </div>
+        </OwlCarousel>
     );
 }

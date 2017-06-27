@@ -7,6 +7,7 @@ export function getAllBeers(page, limit) {
         .then(json => {
             console.log("Beers", json);
             store.dispatch(APIFunction.getBeerSuccess(json));
+            store.dispatch(APIFunction.getPopularBeerSuccess(json));
             return json;
         })
         .catch((err) => console.log(''));

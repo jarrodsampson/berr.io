@@ -1,53 +1,35 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import InfiniteScroll from 'redux-infinite-scroll';
+//import InfiniteScroll from 'redux-infinite-scroll';
+import DocumentTitle from 'react-document-title';
 import '../../css/Home.css';
+import '../../css/owl.carousel.min.css';
+import '../../css/owl.theme.default.min.css';
 import * as APIService from '../../api/APIService';
-import {
-    NavLink
-} from 'react-router-dom'
-import BeerList from '../views/BeerList';
-
-var page = 1;
-var limit = 80;
+import PopularBeerList from '../views/PopularBeerList';
+import BeerFocus from '../views/BeerFocus';
+import { Parallax } from 'react-parallax';
 
 class Home extends Component {
 
     getContent() {
-        APIService.getAllBeers(1, 80);
-    }
-
-    _loadMore() {
-        page += 1;
-        //APIService.getMoreBeers(page, limit);
-        //this.props.dispatch(APIService.getMoreBeers(page, limit))
+        APIService.getAllBeers(1, 20);
+        APIService.getRandomBeer();
     }
 
     componentDidMount() {
         this.getContent();
     }
 
-    _renderMessages() {
-        return this.props.beerList.map((beer, i) =>  {
-            return(
-                <div key={beer.id}>
-                    <NavLink to={"/beer/" + beer.id}>
-                        {beer.name}
-                    </NavLink>
-                </div>
-            )
-        });
-    }
-
     render() {
         return (
-            <div className="container">
-
-                <InfiniteScroll
-                    items={this._renderMessages()}
-                    loadMore={this._loadMore.bind(this)}
-                />
-
+            <div className="">
+                <DocumentTitle title={"Berr.IO"} />
+                <Parallax className="banner" bgImage="assets/images/homeBg.jpg" strength={400} />
+                <h2>Popular Beers</h2>
+                <PopularBeerList beers={this.props.popularBeers} />
+                <h2>Beer Focus</h2>
+                <BeerFocus {...this.props.randomBeer} />
             </div>
         );
     }
@@ -55,9 +37,10 @@ class Home extends Component {
 
 const mapStateToProps = function(store) {
 
-    console.log("Store", store.api);
+    //console.log("Store", store.api);
     return {
-        beerList: store.api.beerList
+        popularBeers: store.api.popularBeers,
+        randomBeer: store.api.randomBeer
     };
 };
 

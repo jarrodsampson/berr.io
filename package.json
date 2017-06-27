@@ -9,6 +9,8 @@
     "react-dom": "^15.6.1",
     "react-headroom": "^2.1.5",
     "react-materialize": "^1.0.1",
+    "react-owl-carousel": "^2.2.0",
+    "react-parallax": "^1.4.2",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import InfiniteScroll from 'redux-infinite-scroll';
-import '../../css/Home.css';
+import '../../css/BeerDetails.css';
+import '../../css/animate.css';
 import * as APIService from '../../api/APIService';
 import BeerDetails from '../views/BeerDetails';
 
-class RandomBeer extends Component {
+class BeerDetail extends Component {
 
     getContent(id) {
         APIService.getBeerDetail(id);
@@ -17,10 +17,13 @@ class RandomBeer extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
+                <div className="pushDown col s12"></div>
+                <div className="container">
 
-                <BeerDetails {...this.props.singleBeer} goBack={APIService.goBack} />
+                    <BeerDetails {...this.props.singleBeer} goBack={APIService.goBack} />
 
+                </div>
             </div>
         );
     }
@@ -28,10 +31,10 @@ class RandomBeer extends Component {
 
 const mapStateToProps = function(store) {
 
-    console.log("Store", store.api);
+    //console.log("Store", store.api);
     return {
         singleBeer: store.api.singleBeer
     };
 };
 
-export default connect(mapStateToProps)(RandomBeer);
+export default connect(mapStateToProps)(BeerDetail);

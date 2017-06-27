@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import InfiniteScroll from 'redux-infinite-scroll';
 import '../../css/Home.css';
 import * as APIService from '../../api/APIService';
-import RandomBeerDetails from '../views/RandomBeerDetails';
+import BeerDetails from '../views/BeerDetails';
 
 class RandomBeer extends Component {
 
@@ -17,10 +16,13 @@ class RandomBeer extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
+                <div className="pushDown col s12"></div>
+                <div className="container">
 
-                <RandomBeerDetails {...this.props.randomBeer} goBack={APIService.goBack} />
+                    <BeerDetails {...this.props.randomBeer} goBack={APIService.goBack} />
 
+                </div>
             </div>
         );
     }

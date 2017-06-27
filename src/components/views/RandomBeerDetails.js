@@ -7,7 +7,7 @@ import {Button} from 'react-materialize';
 export default function(props) {
     return (
         <div className="book">
-            <DocumentTitle title={props.name + " -  Ice and Fire The Series"} />
+            <DocumentTitle title={props.name + " - Berr.IO"} />
             <div>
                 <Button onClick={props.goBack}>Back</Button>
             </div>
