@@ -13,6 +13,17 @@ export function getAllBeers(page, limit) {
         .catch((err) => console.log(''));
 }
 
+export function getRecentBeers(page, limit) {
+    return fetch("https://api.punkapi.com/v2/beers?page=" + page + "&per_page=" + limit)
+        .then(response => response.json())
+        .then(json => {
+            console.log("Recent Beers", json);
+            store.dispatch(APIFunction.getRecentBeerSuccess(json));
+            return json;
+        })
+        .catch((err) => console.log(''));
+}
+
 export function getMoreBeers(page, limit) {
     return fetch("https://api.punkapi.com/v2/beers?page=" + page + "&per_page=" + limit)
         .then(response => response.json())

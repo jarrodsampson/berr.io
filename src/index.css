@@ -60,3 +60,11 @@ nav ul li a {
 .no-margin{
   margin:0 !important;
 }
+
+.left-padding {
+   padding-left: .5em;
+}
+
+.owl-carousel {
+    z-index: 0 !important;
+}

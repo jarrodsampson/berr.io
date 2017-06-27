@@ -1,7 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 export default function(props) {
     return (
-        <div className="book">
+        <div className="focus">
 
             <div className="row details card hoverable">
 
@@ -11,7 +12,7 @@ export default function(props) {
                     <div className="col s12 m12 l12">
                         <div className="col s12 m4 l4 beerContainer">
                             <p className="beerHolder valign-wrapper">
-                                <img className="beer" src={props.image_url} alt={props.name} />
+                                    <img className="beer" src={props.image_url} alt={props.name} />
                             </p>
                         </div>
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //import InfiniteScroll from 'redux-infinite-scroll';
 import DocumentTitle from 'react-document-title';
-import '../../css/Home.css';
+import '../../css/BeerList.css';
 import * as APIService from '../../api/APIService';
 import BeerList from '../views/BeerList';
 

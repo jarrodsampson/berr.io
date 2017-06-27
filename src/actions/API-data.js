@@ -14,6 +14,13 @@ export function getPopularBeerSuccess(popularBeerList) {
     };
 }
 
+export function getRecentBeerSuccess(recentBeerList) {
+    return {
+        type: types.GET_RECENT_BEER_SUCCESS,
+        recentBeerList
+    };
+}
+
 export function getMoreBeerSuccess(beerListMore) {
     return {
         type: types.GET_MORE_BEER_SUCCESS,
