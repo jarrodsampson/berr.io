@@ -1,7 +1,9 @@
 
-import React, {PropTypes, Component} from 'react'
+import React, {Component} from 'react'
 import { Field, reduxForm } from 'redux-form'
 import {Button, Icon} from 'react-materialize';
+import PropTypes from 'prop-types';
+
 class SearchForm extends Component {
     static propTypes = {
         handleSubmit: PropTypes.func
