@@ -68,6 +68,17 @@ export function searchByName(name) {
         .catch((err) => console.log(''));
 }
 
+export function searchByParams(params) {
+    return fetch("https://api.punkapi.com/v2/beers?" + params + "&per_page=80")
+        .then(response => response.json())
+        .then(json => {
+            console.log("From Search", json);
+            store.dispatch(APIFunction.getBeerSearchByNameSuccess(json));
+            return json;
+        })
+        .catch((err) => console.log(''));
+}
+
 export function goBack() {
     window.history.back();
 }

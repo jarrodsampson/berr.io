@@ -20,6 +20,7 @@ export default (
                             <Route exact path="/" component={Home}/>
                             <Route exact path="/list" component={BeerListC}/>
                             <Route exact path="/beer/:id" component={BeerDetail}/>
+                            <Route exact path="/search" component={BeerSearch}/>
                             <Route exact path="/search/:searchTerm" component={BeerSearch}/>
                             <Route exact path="/beer-of-the-day" component={RandomBeer}/>
                             <Redirect from="*" to="/" />

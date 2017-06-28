@@ -5,6 +5,7 @@ import DocumentTitle from 'react-document-title';
 import '../../css/BeerList.css';
 import * as APIService from '../../api/APIService';
 import BeerSearchListResults from '../views/search/BeerSearchListResults';
+import SearchLayout from '../layouts/SearchLayout';
 
 class BeerSearch extends Component {
 
@@ -19,10 +20,11 @@ class BeerSearch extends Component {
     render() {
         return (
             <div className="max-width">
-                <DocumentTitle title={this.props.match.params.searchTerm + " - Berr.IO"} />
+                <DocumentTitle title={(this.props.match.params.searchTerm || "Search") + " - Berr.IO"} />
                 <div className="pushDown col s12"></div>
                 <div className="row">
                     <div className="col s12">
+                        <SearchLayout onSubmit={this.submit} />
                         <p>Results for {this.props.match.params.searchTerm} - {this.props.beerSearchByName.length} found.</p>
                     </div>
                 </div>
