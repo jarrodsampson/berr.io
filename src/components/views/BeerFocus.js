@@ -12,14 +12,14 @@ export default function(props) {
                     <div className="col s12 m12 l12">
                         <div className="col s12 m4 l4 beerContainer">
                             <p className="beerHolder valign-wrapper">
-                                    <img className="beer" src={props.image_url} alt={props.name} />
+                                <img className="beer" src={props.image_url} alt={props.name} />
                             </p>
                         </div>
 
                         <div className="col s12 m8 l8">
 
-                            <h2 className="card-title no-padding no-margin">{props.name}</h2>
-                            <p><em>{props.tagline}</em></p>
+                            <h2 className="card-title no-padding no-margin"><NavLink className="foodLinks" to={"/beer/" + props.id}>{props.name}</NavLink></h2>
+                            <p className="tagLine"><em>{props.tagline}</em></p>
 
                             <div className="col s12 pushDown"></div>
 
@@ -28,6 +28,8 @@ export default function(props) {
                             <div className="col s12 pushDown"></div>
 
                             <p><strong>Tips:</strong></p> <p className="text">{props.brewers_tips}</p>
+
+                            <div className="col s12 pushDown"></div>
 
                         </div>
                     </div>

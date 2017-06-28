@@ -4,6 +4,7 @@ const initialState = {
     beerList: [],
     popularBeers: [],
     recentBeers: [],
+    beerSearchByName: [],
     randomBeer: {
         method: {
             fermentation: {
@@ -53,6 +54,8 @@ const APIReducer = function(state = initialState, action) {
             return Object.assign({}, state, { randomBeer: action.randomBeer });
         case types.GET_SINGLE_BEER_SUCCESS:
             return Object.assign({}, state, { singleBeer: action.singleBeer });
+        case types.GET_BEER_SEARCH_BY_NAME_SUCCESS:
+            return Object.assign({}, state, { beerSearchByName: action.beerNameResults });
         default:
 
     }

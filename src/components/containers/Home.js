@@ -12,6 +12,8 @@ import TrendingBeerList from '../views/TrendingBeerList';
 import BeerFocus from '../views/BeerFocus';
 import { Parallax } from 'react-parallax';
 
+import SearchForm from '../layouts/SearchForm';
+
 class Home extends Component {
 
     getContent() {
@@ -28,7 +30,13 @@ class Home extends Component {
         return (
             <div className="">
                 <DocumentTitle title={"Berr.IO"} />
-                <Parallax className="banner" bgImage="assets/images/beerBg.jpg" strength={400} />
+                <div className="searchHolder">
+                    <Parallax className="banner" bgImage="assets/images/beerBg.jpg" strength={400} />
+                    <div className="searchBox">
+                        <h4 className="searchTextHeader">Search for What You Love</h4>
+                        <SearchForm onSubmit={this.submit} />
+                    </div>
+                </div>
                 <h2 className="left-padding">Popular/ Trending</h2>
                 <PopularBeerList beers={this.props.popularBeers} />
                 <h2 className="left-padding">Beer Focus</h2>

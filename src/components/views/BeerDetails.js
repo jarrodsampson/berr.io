@@ -25,7 +25,7 @@ export default function(props) {
                         <div className="col s12 m8 l8">
 
                             <h2 className="card-title no-padding no-margin">{props.name}</h2>
-                            <p><em>{props.tagline}</em></p>
+                            <p className="tagLine"><em>{props.tagline}</em></p>
 
                             <div className="col s12 pushDown"></div>
 

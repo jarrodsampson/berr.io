@@ -57,6 +57,17 @@ export function getBeerDetail(id) {
         .catch((err) => console.log(''));
 }
 
+export function searchByName(name) {
+    return fetch("https://api.punkapi.com/v2/beers?beer_name=" + name)
+        .then(response => response.json())
+        .then(json => {
+            console.log("Beer Search By Name", json);
+            store.dispatch(APIFunction.getBeerSearchByNameSuccess(json));
+            return json;
+        })
+        .catch((err) => console.log(''));
+}
+
 export function goBack() {
     window.history.back();
 }

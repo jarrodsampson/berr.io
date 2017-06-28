@@ -1,0 +1,11 @@
+
+@media(max-width: 601px) {
+
+
+    .beer {
+        max-width: 50px !important;
+        margin: auto;
+    }
+
+
+}

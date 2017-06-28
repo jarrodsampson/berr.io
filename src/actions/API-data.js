@@ -41,3 +41,10 @@ export function getSingleBeerSuccess(singleBeer) {
         singleBeer
     };
 }
+
+export function getBeerSearchByNameSuccess(beerNameResults) {
+    return {
+        type: types.GET_BEER_SEARCH_BY_NAME_SUCCESS,
+        beerNameResults
+    };
+}

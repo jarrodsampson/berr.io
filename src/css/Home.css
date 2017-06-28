@@ -47,3 +47,55 @@
 .popular .card:hover .card-content {
     height:100%;
 }
+
+.searchHolder {
+    position:relative;
+}
+
+.searchBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 210px;
+    background: rgba(0,0,0,0.6);
+    margin-top: -105px;
+    margin-left: -250px;
+    padding: 1em 1em 2em 1em;
+    border-radius: 1px;
+    text-align: center;
+}
+
+.searchBox .searchTextHeader {
+    color:white;
+}
+
+@media(max-width: 601px) {
+    .searchBox {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 210px;
+        background: rgba(0,0,0,0.6);
+        margin-top: -105px;
+        margin-left: 0;
+        padding: 1em 1em 2em 1em;
+        border-radius: 1px;
+        text-align: center;
+    }
+
+    .searchBox .searchTextHeader {
+        font-size:18pt;
+    }
+
+    .searchBox button {
+        width: 100%;
+    }
+
+    .tagLine {
+        text-align: center;
+    }
+
+
+}
