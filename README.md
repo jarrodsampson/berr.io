@@ -1,6 +1,6 @@
 # Berr.IO
 
-A mini viewer of the GitHub application for source code, organizations, repositories, and users. Built on Angular 4 and MaterializeCSS. Designed by [planlodge](http://planlodge.com).
+A mini viewer of the GitHub application for source code, organizations, repositories, and users. Built on React, Redux, and MaterializeCSS. Designed by [planlodge](http://planlodge.com).
 
 [![Build Status](https://travis-ci.org/stevenbenner/jquery-powertip.svg?branch=master)](https://travis-ci.org/stevenbenner/jquery-powertip)
 ![License](https://img.shields.io/packagist/l/doctrine/orm.svg)
