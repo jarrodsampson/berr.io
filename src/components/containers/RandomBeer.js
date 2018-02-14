@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { connect }          from 'react-redux';
-import                           '../../css/build/Home.css';
-import * as APIService      from '../../api/APIService';
-import BeerDetails          from '../views/BeerDetails';
+import React, { Component } from 'react'
+import { connect }          from 'react-redux'
+import                           '../../css/build/Home.css'
+import * as APIService      from '../../api/APIService'
+import BeerDetails          from '../views/BeerDetails'
 
 class RandomBeer extends Component {
 

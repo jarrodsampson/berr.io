@@ -1,10 +1,10 @@
-import React, { Component }     from 'react';
-import { connect }              from 'react-redux';
-import DocumentTitle            from 'react-document-title';
-import                               '../../css/build/BeerList.css';
-import * as APIService          from '../../api/APIService';
-import BeerSearchListResults    from '../views/search/BeerSearchListResults';
-import SearchLayout             from '../layouts/SearchLayout';
+import React, { Component }     from 'react'
+import { connect }              from 'react-redux'
+import DocumentTitle            from 'react-document-title'
+import                               '../../css/build/BeerList.css'
+import * as APIService          from '../../api/APIService'
+import BeerSearchListResults    from '../views/search/BeerSearchListResults'
+import SearchLayout             from '../layouts/SearchLayout'
 
 class BeerSearch extends Component {
 
@@ -24,7 +24,7 @@ class BeerSearch extends Component {
                 <div className="row">
                     <div className="col s12">
                         <SearchLayout onSubmit={this.submit} />
-                        <p>Results for {this.props.match.params.searchTerm} - {this.props.beerSearchByName.length} found.</p>
+                        <p>Results for {this.props.match.params.searchTerm || "(None)"} - {this.props.beerSearchByName.length} found.</p>
                     </div>
                 </div>
                 <BeerSearchListResults beers={this.props.beerSearchByName} />

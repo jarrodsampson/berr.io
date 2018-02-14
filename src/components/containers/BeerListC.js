@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { connect }          from 'react-redux';
-import DocumentTitle        from 'react-document-title';
-import                           '../../css/build/BeerList.css';
-import * as APIService      from '../../api/APIService';
-import BeerList             from '../views/BeerList';
+import React, { Component } from 'react'
+import { connect }          from 'react-redux'
+import DocumentTitle        from 'react-document-title'
+import                           '../../css/build/BeerList.css'
+import * as APIService      from '../../api/APIService'
+import BeerList             from '../views/BeerList'
 
 class BeerListC extends Component {
 

@@ -1,10 +1,11 @@
-import React from 'react';
+import React from 'react'
 import {
     NavLink
 } from 'react-router-dom'
-import Headroom from 'react-headroom';
-import Back2Top from 'react-back2top';
-import {Navbar, NavItem, Button, Modal} from 'react-materialize';
+import Headroom from 'react-headroom'
+import Back2Top from 'react-back2top'
+
+import {Navbar, NavItem, Button, Modal, Icon} from 'react-materialize'
 
 export default function(props) {
     return (
@@ -17,6 +18,7 @@ export default function(props) {
                         <li><NavLink to="/beer-of-the-day" activeClassName="activeV">Daily Beer</NavLink></li>
                         <li><NavLink to="#aboutModal">About</NavLink></li>
                         <NavItem href="//punkapi.com/documentation/v2" target="_blank" rel="noopener noreferrer">API</NavItem>
+                        <li><NavLink to="/search" activeClassName="activeV"><Icon>search</Icon></NavLink></li>
                     </Navbar>
                 </Headroom>
 
@@ -42,6 +44,7 @@ export default function(props) {
                         </p>
                     </div>
                 </Modal>
+
             </main>
             <footer className="page-footer black">
                 <div className="container">

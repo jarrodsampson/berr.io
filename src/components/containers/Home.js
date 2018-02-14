@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { connect }          from 'react-redux';
-import DocumentTitle        from 'react-document-title';
-import                           '../../css/build/Home.css';
-import                           '../../css/build/BeerFocus.css';
-import                           '../../css/libs/Owl.carousel.min.css';
-import                           '../../css/libs/Owl.theme.default.min.css';
-import * as APIService      from '../../api/APIService';
-import PopularBeerList      from '../views/PopularBeerList';
-import TrendingBeerList     from '../views/TrendingBeerList';
-import BeerFocus            from '../views/BeerFocus';
-import { Parallax }         from 'react-parallax';
+import React, { Component } from 'react'
+import { connect }          from 'react-redux'
+import DocumentTitle        from 'react-document-title'
+import                           '../../css/build/Home.css'
+import                           '../../css/build/BeerFocus.css'
+import                           '../../css/libs/Owl.carousel.min.css'
+import                           '../../css/libs/Owl.theme.default.min.css'
+import * as APIService      from '../../api/APIService'
+import PopularBeerList      from '../views/PopularBeerList'
+import TrendingBeerList     from '../views/TrendingBeerList'
+import BeerFocus            from '../views/BeerFocus'
+import { Parallax }         from 'react-parallax'
 
-import SearchForm           from '../layouts/SearchForm';
+import SearchForm           from '../layouts/SearchForm'
 
 class Home extends Component {
 

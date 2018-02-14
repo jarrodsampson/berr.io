@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react'
 import { Field, reduxForm }          from 'redux-form'
-import {Button, Icon}                from 'react-materialize';
+import {Button, Icon}                from 'react-materialize'
 
 class SearchForm extends Component {
     static propTypes = {
