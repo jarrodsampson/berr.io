@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import '../../css/BeerDetails.css';
-import '../../css/animate.css';
-import * as APIService from '../../api/APIService';
-import BeerDetails from '../views/BeerDetails';
+import { connect }          from 'react-redux';
+import                           '../../css/build/BeerDetails.css';
+import                           '../../css/libs/Animate.css';
+import * as APIService      from '../../api/APIService';
+import BeerDetails          from '../views/BeerDetails';
 
 class BeerDetail extends Component {
 
@@ -31,7 +31,6 @@ class BeerDetail extends Component {
 
 const mapStateToProps = function(store) {
 
-    //console.log("Store", store.api);
     return {
         singleBeer: store.api.singleBeer
     };

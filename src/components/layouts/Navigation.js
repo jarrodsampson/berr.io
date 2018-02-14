@@ -6,7 +6,6 @@ import Headroom from 'react-headroom';
 import Back2Top from 'react-back2top';
 import {Navbar, NavItem, Button, Modal} from 'react-materialize';
 
-
 export default function(props) {
     return (
         <div className="App">
@@ -17,7 +16,7 @@ export default function(props) {
                         <li><NavLink to="/list" activeClassName="activeV">List</NavLink></li>
                         <li><NavLink to="/beer-of-the-day" activeClassName="activeV">Daily Beer</NavLink></li>
                         <li><NavLink to="#aboutModal">About</NavLink></li>
-                        <NavItem href="https://punkapi.com/documentation/v2" target="_blank" rel="noopener noreferrer">API</NavItem>
+                        <NavItem href="//punkapi.com/documentation/v2" target="_blank" rel="noopener noreferrer">API</NavItem>
                     </Navbar>
                 </Headroom>
 
@@ -66,8 +65,11 @@ export default function(props) {
                 </div>
                 <div className="footer-copyright red">
                     <div className="container">
-                        © 2017 Planlodge
-                        <a className="grey-text text-lighten-4 right" href="//planlodge.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                        © 2018 Planlodge
+                        <div className="grey-text text-lighten-4 right">
+                            <a className="grey-text text-lighten-4" href="//planlodge.com" target="_blank" rel="noopener noreferrer">Portfolio</a>&nbsp;|&nbsp;
+                            <a className="grey-text text-lighten-4" href="//github.com/planlodge/berr.io" target="_blank" rel="noopener noreferrer">Source Code</a>
+                        </div>
                     </div>
                 </div>
 

@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-//import InfiniteScroll from 'redux-infinite-scroll';
-import DocumentTitle from 'react-document-title';
-import '../../css/Home.css';
-import '../../css/BeerFocus.css';
-import '../../css/owl.carousel.min.css';
-import '../../css/owl.theme.default.min.css';
-import * as APIService from '../../api/APIService';
-import PopularBeerList from '../views/PopularBeerList';
-import TrendingBeerList from '../views/TrendingBeerList';
-import BeerFocus from '../views/BeerFocus';
-import { Parallax } from 'react-parallax';
+import { connect }          from 'react-redux';
+import DocumentTitle        from 'react-document-title';
+import                           '../../css/build/Home.css';
+import                           '../../css/build/BeerFocus.css';
+import                           '../../css/libs/Owl.carousel.min.css';
+import                           '../../css/libs/Owl.theme.default.min.css';
+import * as APIService      from '../../api/APIService';
+import PopularBeerList      from '../views/PopularBeerList';
+import TrendingBeerList     from '../views/TrendingBeerList';
+import BeerFocus            from '../views/BeerFocus';
+import { Parallax }         from 'react-parallax';
 
-import SearchForm from '../layouts/SearchForm';
+import SearchForm           from '../layouts/SearchForm';
 
 class Home extends Component {
 
@@ -50,7 +49,6 @@ class Home extends Component {
 
 const mapStateToProps = function(store) {
 
-    //console.log("Store", store.api);
     return {
         popularBeers: store.api.popularBeers,
         recentBeers: store.api.recentBeers,

@@ -1,8 +1,10 @@
-import store from '../Store';
+import store            from '../Store';
 import * as APIFunction from '../actions/API-data';
 
+let server = "https://api.punkapi.com/v2/beers";
+
 export function getAllBeers(page, limit) {
-    return fetch("https://api.punkapi.com/v2/beers?page=" + page + "&per_page=" + limit)
+    return fetch(server + "?page=" + page + "&per_page=" + limit)
         .then(response => response.json())
         .then(json => {
             console.log("Beers", json);
@@ -14,7 +16,7 @@ export function getAllBeers(page, limit) {
 }
 
 export function getRecentBeers(page, limit) {
-    return fetch("https://api.punkapi.com/v2/beers?page=" + page + "&per_page=" + limit)
+    return fetch(server + "?page=" + page + "&per_page=" + limit)
         .then(response => response.json())
         .then(json => {
             console.log("Recent Beers", json);
@@ -25,7 +27,7 @@ export function getRecentBeers(page, limit) {
 }
 
 export function getMoreBeers(page, limit) {
-    return fetch("https://api.punkapi.com/v2/beers?page=" + page + "&per_page=" + limit)
+    return fetch(server + "?page=" + page + "&per_page=" + limit)
         .then(response => response.json())
         .then(json => {
             console.log("More Beers", json);
@@ -36,7 +38,7 @@ export function getMoreBeers(page, limit) {
 }
 
 export function getRandomBeer() {
-    return fetch("https://api.punkapi.com/v2/beers/random")
+    return fetch(server + "/random")
         .then(response => response.json())
         .then(json => {
             console.log("Random Beer", json[0]);
@@ -47,7 +49,7 @@ export function getRandomBeer() {
 }
 
 export function getBeerDetail(id) {
-    return fetch("https://api.punkapi.com/v2/beers/" + id)
+    return fetch(server + "/" + id)
         .then(response => response.json())
         .then(json => {
             console.log("Beer Detail", json[0]);
@@ -58,7 +60,7 @@ export function getBeerDetail(id) {
 }
 
 export function searchByName(name) {
-    return fetch("https://api.punkapi.com/v2/beers?beer_name=" + name)
+    return fetch(server + "?beer_name=" + name)
         .then(response => response.json())
         .then(json => {
             console.log("Beer Search By Name", json);
@@ -69,7 +71,7 @@ export function searchByName(name) {
 }
 
 export function searchByParams(params) {
-    return fetch("https://api.punkapi.com/v2/beers?" + params + "&per_page=80")
+    return fetch(server + "?" + params + "&per_page=80")
         .then(response => response.json())
         .then(json => {
             console.log("From Search", json);

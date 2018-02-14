@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import '../../css/Home.css';
-import * as APIService from '../../api/APIService';
-import BeerDetails from '../views/BeerDetails';
+import { connect }          from 'react-redux';
+import                           '../../css/build/Home.css';
+import * as APIService      from '../../api/APIService';
+import BeerDetails          from '../views/BeerDetails';
 
 class RandomBeer extends Component {
 
@@ -19,9 +19,7 @@ class RandomBeer extends Component {
             <div>
                 <div className="pushDown col s12"></div>
                 <div className="container">
-
                     <BeerDetails {...this.props.randomBeer} goBack={APIService.goBack} />
-
                 </div>
             </div>
         );
@@ -30,7 +28,6 @@ class RandomBeer extends Component {
 
 const mapStateToProps = function(store) {
 
-    console.log("Store", store.api);
     return {
         randomBeer: store.api.randomBeer
     };

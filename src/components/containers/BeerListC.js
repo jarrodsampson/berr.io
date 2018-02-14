@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-//import InfiniteScroll from 'redux-infinite-scroll';
-import DocumentTitle from 'react-document-title';
-import '../../css/BeerList.css';
-import * as APIService from '../../api/APIService';
-import BeerList from '../views/BeerList';
+import { connect }          from 'react-redux';
+import DocumentTitle        from 'react-document-title';
+import                           '../../css/build/BeerList.css';
+import * as APIService      from '../../api/APIService';
+import BeerList             from '../views/BeerList';
 
 class BeerListC extends Component {
 
@@ -29,7 +28,6 @@ class BeerListC extends Component {
 
 const mapStateToProps = function(store) {
 
-    //console.log("Store", store.api);
     return {
         beerList: store.api.beerList
     };

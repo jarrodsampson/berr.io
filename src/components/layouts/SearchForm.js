@@ -1,7 +1,7 @@
-
 import React, {PropTypes, Component} from 'react'
-import { Field, reduxForm } from 'redux-form'
-import {Button, Icon} from 'react-materialize';
+import { Field, reduxForm }          from 'redux-form'
+import {Button, Icon}                from 'react-materialize';
+
 class SearchForm extends Component {
     static propTypes = {
         handleSubmit: PropTypes.func
@@ -17,7 +17,7 @@ class SearchForm extends Component {
 
         return (
             <form onSubmit={handleSubmit(this.handleSubmit)}>
-                <Field name="searchText" component="input" type="text" {...searchText} />
+                <Field name="searchText" component="input" type="text" {...searchText} placeholder="Search Catalogue" />
                 <Button className="red" type="submit"><Icon>search</Icon></Button>
             </form>
 

@@ -1,10 +1,9 @@
-
 import React, {PropTypes, Component} from 'react'
-import { Field, reduxForm } from 'redux-form'
-import {Button, Icon} from 'react-materialize';
-import serialize from 'form-serialize';
+import { Field, reduxForm }          from 'redux-form'
+import {Button, Icon}                from 'react-materialize';
+import serialize                     from 'form-serialize';
 
-import * as APIService from '../../api/APIService';
+import * as APIService               from '../../api/APIService';
 
 class SearchForm extends Component {
     static propTypes = {
@@ -12,18 +11,17 @@ class SearchForm extends Component {
     };
 
     getContent(search) {
-            APIService.searchByParams(search);
+        APIService.searchByParams(search);
     }
 
     handleSubmit(e) {
         let form = serialize(document.querySelector('#searchData'));
         console.log(form);
         APIService.searchByParams(form);
-        //window.location.replace("/search/" + e.searchText);
     }
 
     render() {
-        const {fields: {beer_name, abvmmin, abvmax, ibumin, ibumax, ebcmin, ebcmax, yeast, hops, malt, beforeBrew, afterBrew, food}, handleSubmit, reset, pristine} = this.props;
+        const {fields: {beer_name, abvmmin, abvmax, ibumin, ibumax, ebcmin, ebcmax, yeast, hops, malt, food}, handleSubmit, reset, pristine} = this.props;
 
         return (
             <form id="searchData" onSubmit={handleSubmit(this.handleSubmit)}>
@@ -57,12 +55,6 @@ class SearchForm extends Component {
                 <div className="col s12 m6">
                     <Field name="malt" component="input" type="text" {...malt} placeholder="Malt" />
                 </div>
-                {/*<div className="col s12 m6">
-                    <Field name="brewed_before" component="input" type="text" {...beforeBrew} placeholder="Brew Start Range">
-                </div>
-                <div className="col s12 m6">
-                    <Field name="brewed_after" component="input" type="text" {...afterBrew} placeholder="Brew End Range" />
-                </div>*/}
                 <div className="col s12">
                     <Field name="food" component="input" type="text" {...food} placeholder="Complimenting Food" />
                 </div>

@@ -1,0 +1,92 @@
+.banner
+  min-height: 250px
+  width: 100%
+  background-size: cover
+  background-position: bottom
+
+.focus .card
+  min-height: 350px
+
+.item
+  margin: 1em
+
+.popular .card
+  img
+    max-width: 60px
+    margin: auto
+    padding: .3em
+    margin-top: 3em
+  min-height: 260px
+  overflow: hidden
+  max-height: 260px
+  .card-content
+    position: absolute
+    bottom: 0
+    left: 0
+    background: rgba(0, 0, 0, 0.8)
+    width: 100%
+    height: 35%
+    text-align: center
+    color: white
+    transition: all .2s ease-in-out
+    -webkit-transition: all .2s ease-in-out
+    -moz-transition: all .2s ease-in-out
+    transition-timing-function: cubic-bezier(1.28, -0.55, 0.265, 1.55)
+  &:hover .card-content
+    height: 100%
+
+.searchHolder
+  position: relative
+
+.searchBox
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 500px
+  height: 210px
+  background: rgba(0, 0, 0, 0.6)
+  margin-top: -105px
+  margin-left: -250px
+  padding: 1em 1em 2em 1em
+  border-radius: 1px
+  text-align: center
+  .searchTextHeader
+    color: white
+  input[type="text"]:focus:not([readonly])
+    border-bottom: 1px solid red !important
+    box-shadow: 0 1px 0 0 red !important
+    color: white
+    text-align: center
+
+input
+  &[type="password"]:focus:not([readonly]), &[type="email"]:focus:not([readonly]), &[type="url"]:focus:not([readonly]), &[type="time"]:focus:not([readonly]), &[type="date"]:focus:not([readonly]), &[type="datetime"]:focus:not([readonly]), &[type="datetime-local"]:focus:not([readonly]), &[type="tel"]:focus:not([readonly]), &[type="number"]:focus:not([readonly]), &[type="search"]:focus:not([readonly])
+    border-bottom: 1px solid red !important
+    box-shadow: 0 1px 0 0 red !important
+    color: white
+    text-align: center
+
+textarea.materialize-textarea:focus:not([readonly])
+  border-bottom: 1px solid red !important
+  box-shadow: 0 1px 0 0 red !important
+  color: white
+  text-align: center
+
+@media (max-width: 601px)
+  .searchBox
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    height: 210px
+    background: rgba(0, 0, 0, 0.6)
+    margin-top: -105px
+    margin-left: 0
+    padding: 1em 1em 2em 1em
+    border-radius: 1px
+    text-align: center
+    .searchTextHeader
+      font-size: 18pt
+    button
+      width: 100%
+  .tagLine
+    text-align: center

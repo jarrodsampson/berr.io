@@ -20,15 +20,20 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-form": "^6.8.0",
-    "redux-infinite-scroll": "^1.0.9"
+    "redux-infinite-scroll": "^1.0.9",
+    "save-dev": "^2.0.0"
   },
   "devDependencies": {
+    "node-less-chokidar": "^0.1.2",
+    "node-sass-chokidar": "0.0.3",
     "react-scripts": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar src/css/ -o src/css/build/",
+    "watch-css": "node-sass-chokidar src/css/ -o src/css/build/ --watch"
   }
 }
