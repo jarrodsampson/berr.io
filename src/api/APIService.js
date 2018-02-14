@@ -1,7 +1,7 @@
-import store            from '../Store';
-import * as APIFunction from '../actions/API-data';
+import store            from '../Store'
+import * as APIFunction from '../actions/API-data'
 
-let server = "https://api.punkapi.com/v2/beers";
+let server = "https://api.punkapi.com/v2/beers"
 
 export function getAllBeers(page, limit) {
     return fetch(server + "?page=" + page + "&per_page=" + limit)
